@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 📦 LMS Frontend - DevOps Deployment Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Project Goal
+This project focuses on demonstrating a **complete DevOps pipeline** around a static frontend application, deployed automatically to AWS — not on building a full-featured React site.
 
-## Available Scripts
+## 🛠 Tech Stack
+- **Frontend Framework:** React (with TailwindCSS)
+- **Infrastructure as Code:** Terraform
+- **Deployment Target:** AWS S3 (static hosting) + CloudFront (CDN)
+- **CI/CD:** GitHub Actions
 
-In the project directory, you can run:
+## ⚙️ DevOps Pipeline Features
+- ✅ Static React app with Tailwind styling
+- ✅ Infrastructure created via Terraform (S3 + CloudFront)
+- ✅ GitHub Actions workflow automates:
+  - Installing dependencies
+  - Running basic tests
+  - Building the app
+  - Uploading build artifacts to S3
+- ✅ CloudFront configured for global content delivery
+- ✅ Public access control on S3 managed securely via Terraform
 
-### `npm start`
+## 🌍 Deployment
+The project includes a live site deployment through AWS services.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> 🔒 **Note:** The site is deployed and technically accessible, but the main focus of the project is on demonstrating the pipeline — not on publishing active content to the public.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Repository Structure
+```
+├── src/                  # React source code
+├── public/               # Static assets
+├── infra/                # Terraform configuration
+│   └── main.tf           # Infrastructure definitions
+├── .github/workflows/    # GitHub Actions CI/CD
+│   └── deploy.yml        # Deployment pipeline definition
+├── package.json          # Project metadata
+├── README.md             # Project overview
+```
 
-### `npm test`
+## 🧠 Why This Matters
+This project demonstrates key DevOps skills:
+- Automating deployment workflows from source to production
+- Managing cloud infrastructure as code (IaC)
+- Creating robust CI/CD pipelines
+- Handling secure secret management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔐 Secrets Used in GitHub Actions
+Defined under `Settings > Secrets and variables > Actions`:
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_S3_BUCKET`
 
-### `npm run build`
+## ✅ Future Enhancements
+- Add CloudFront cache invalidation after deployment
+- Integrate ESLint and unit tests into CI pipeline
+- Set up deployment to a custom domain with HTTPS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🚀 **This project represents a complete DevOps process for static site deployment — ideal for demonstrating infrastructure, automation, and cloud skills in a professional portfolio.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
